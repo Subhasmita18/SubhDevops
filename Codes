@@ -1,0 +1,33 @@
+ 1> sudo apt-get update -y
+2>  sudo apt-get purge -y lxc-docker* && sudo apt-get -y purge docker.io*
+
+docker run --name jenkins-production \ --detach \ -p 50000:50000 \ -p 8080:8080 \ -v jenkins-data:/var/jenkins_home \ jenkins/jenkins:2.190.1
+/home/ubuntu/java-tomcat-maven-example/target/dependency/webapp-runner.jar
+
+*************
+1> Pull the java source code 
+2> In local machine java source code ll be thr
+3> we need to create the dockerfile for that java source code
+4> i need to commit the changes and push it to github repo
+5> currently all the java source code in my github repo
+6> i need to create a jenkins job in the jenkins UI
+
+********************
+1>git pull url
+2> cd "path or project name"
+3> nano - paste the docker code >in order to save ctrl+O, write the file name as docker file.Then ctrl+x to exit
+4>git add . >to add the uncommited changes to the staging area
+5> git commit -m "msg" .
+6>git push origin
+7> if config required then git config --global user.name subhasmita
+8> git config --global user.email swainsubh18@gmail.com
+9>git push origin
+10>log in to jenkin url ll be given
+11>pipeline set up
+12> docker build -t project3 >it will convert the docker file into the image
+13>docker login --username=subhasmita18
+14>docker tag project3image id subhasmita18/project1:V1 (Docker hub project name)
+15>docker push subhasmita18/project1
+16>docker pull subhasmita18/project1
+17>docker run --name java -p 3333:8080 -d image id
+
